@@ -15,6 +15,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { TermsOfUseComponent } from './terms-of-use/terms-of-use.component';
 import { SearchbusComponent } from './searchbus/searchbus.component';
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
+import { AdminloginComponent } from './adminlogin/adminlogin.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.compone
     TermsOfUseComponent,
     SearchbusComponent,
     ForgotpasswordComponent,
+    AdminloginComponent,
   ],
   imports: [
     BrowserModule,
