@@ -1,0 +1,44 @@
+<h4 class="text-center" id="head">Login</h4><br><br>
+    <div class="text-center">
+        <form [formGroup]="ContactForm" (ngSubmit)="SubmitInfo()">
+
+            
+                <input type="text" placeholder="Enter Username"  name="uname" formControlName="username"/>
+                <br>
+
+            <div *ngIf="!Username?.valid && (Username?.dirty || Username?.touched)" class="error text-danger" role="alert">
+                <div *ngIf="Username?.errors?.required"><!--here the name firstname is from get method that is inside the ts file-->
+                  User Name is required
+                </div>
+                <div *ngIf="Username?.errors?.minlength">
+                    User Name length should be 3
+                  </div>
+            </div>
+                <br>
+    <input type="password" placeholder="Enter Password"  name="psw" formControlName="password"  />
+    <br>
+
+            <div *ngIf="!Password?.valid && (Password?.dirty || Password?.touched)" class="error text-danger" role="alert">
+                <div *ngIf="Password?.errors?.required"><!--here the name firstname is from get method that is inside the ts file-->
+                  Password is required
+                </div>
+                <div *ngIf="Password?.errors?.pattern">
+                    Password pattern not macthing
+                  </div>
+            </div>
+            <br>
+
+            <button  type="Submit">Login</button>
+            <div class="checkbox">
+                <label><input type="checkbox" name="remember"> Remember me</label>
+            </div>
+            <div>
+                    <button type="button">Cancel</button>
+                </div>
+                <div >
+                    <a href="ForgotPassword">Forgot Password?</a>
+                </div>
+
+            
+        </form>
+    </div>

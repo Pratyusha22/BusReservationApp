@@ -1,0 +1,81 @@
+<div id="regbody" [align]="'center'"> 
+    <h3 style="text-align: center;">Sign Up</h3><br><br>
+    <form [formGroup]="ContactForm" (ngSubmit)="Submitinfo()" id="form" >
+        <p >
+            
+            <input type="text"  class="textbox"   placeholder="First Name" id="FirstName" required minlength="5"  
+             name="FirstName" formControlName="FirstName"/>
+        </p>
+        <div *ngIf="!FirstName?.valid && (FirstName?.dirty || FirstName?.touched)" class="error">
+            <div *ngIf="FirstName?.errors?.required">
+                Please enter FirstName  
+            </div>
+        </div>
+        <div *ngIf="FirstName?.errors?.minlength">
+            FirstName minilength is 5
+        </div>
+        <p  >
+           
+            <input type="text"  class="textbox"   placeholder="Last Name" id="LastName" required minlength="5"  
+             name="LastName" formControlName="LastName"/>
+        </p>
+        <p >
+            
+            <input type="text" class="textbox"  placeholder="Email Address"  required id="email" name="email" formControlName="EmailAddress" />
+     </p>
+        <div *ngIf="!EmailAddress?.valid && (EmailAddress?.dirty || EmailAddress?.touched)" class="error">
+            <div *ngIf="EmailAddress?.errors?.pattern">
+                Please enter correct email
+            </div>
+            <div *ngIf="!EmailAddress?.valid && (EmailAddress?.dirty || EmailAddress?.touched)" class="error">
+                <div *ngIf="EmailAddress?.errors?.required">
+                 Email is required 
+                </div>
+            </div>
+            
+        </div>
+        <p>
+                
+                <input type="text" class="textbox" placeholder="Password" id="Password"  name="Password"   formControlName="Password"/>
+        </p>
+            <div *ngIf="!Password?.valid && (Password?.dirty || Password?.touched)" class="error">
+                <div *ngIf="Password?.errors?.pattern">
+                    At least 1 Uppercase
+                    At least 1 Lowercase
+                    At least 1 Number
+                    At least 1 Symbol, symbol allowed --> !@#$%^&*_=+-
+                </div>
+            </div>
+            <div *ngIf="Password?.errors?.minlength">
+                Too short
+            </div>
+            <div *ngIf="!Password?.valid && (Password?.dirty || Password?.touched)" class="error">
+                <div *ngIf="Password?.errors?.required">
+                Please enter Password 
+                </div>
+            </div>
+    
+            <p>
+                
+                <input type="text" class="textbox" placeholder="Confirm Password" id="CPassword"  name="CPassword"   formControlName="ConfirmPassword"/>
+            </p>
+            
+             <p >
+                
+                <input type="text" class="textbox"  placeholder="Mobile Number"  id="Mobileno" name="Mobileno" formControlName="Mobileno" />
+             </p>  
+             <div *ngIf="!Mobileno?.valid && (Mobileno?.dirty || Mobileno?.touched)" class="error">
+                <div *ngIf="Mobileno?.errors?.pattern">
+                  it should only contain numbers
+                </div>
+            </div>
+            
+            <div *ngIf="Mobileno?.errors?.maxlength">
+                maxlength is 10
+             </div>
+    
+    
+    <div >
+            <input type="submit"  id="regbtn"  value="Sign Up" >
+        </div>
+    </form>
