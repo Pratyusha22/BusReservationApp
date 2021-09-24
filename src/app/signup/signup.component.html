@@ -1,4 +1,4 @@
-<div id="regbody" [align]="'center'"> 
+<div [ngStyle]="{'background-color':'azure'}"><div id="regbody" [align]="'center'"> 
     <h3 style="text-align: center;">Sign Up</h3><br><br>
     <form [formGroup]="ContactForm" (ngSubmit)="Submitinfo()" id="form" >
         <p >
@@ -79,3 +79,4 @@
             <input type="submit"  id="regbtn"  value="Sign Up" >
         </div>
     </form>
+</div>

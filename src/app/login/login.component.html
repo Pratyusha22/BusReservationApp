@@ -1,4 +1,4 @@
-<h4 class="text-center" id="head">Login</h4><br><br>
+<div [ngStyle]="{'background-color':'azure'}"><h4 class="text-center" id="head">Login</h4><br><br>
     <div class="text-center">
         <form [formGroup]="ContactForm" (ngSubmit)="SubmitInfo()">
 
@@ -36,9 +36,10 @@
                     <button type="button">Cancel</button>
                 </div>
                 <div >
-                    <a href="ForgotPassword">Forgot Password?</a>
+                    <a routerLink='ForgotPassword'>Forgot Password</a>
                 </div>
 
             
         </form>
     </div>
+</div>
