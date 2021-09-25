@@ -1,45 +1,57 @@
-<div [ngStyle]="{'background-color':'azure'}"><h4 class="text-center" id="head">Login</h4><br><br>
-    <div class="text-center">
-        <form [formGroup]="ContactForm" (ngSubmit)="SubmitInfo()">
-
+<div [ngStyle]="{'background-color':'azure'}"><div id="regbody" [align]="'center'"> 
+    <h3 style="text-align: center;">Login</h3><br><br>
+    <form [formGroup]="ContactForm" (ngSubmit)="SubmitInfo()" id="form" >
+        <p >
             
-                <input type="text" placeholder="Enter Username"  name="uname" formControlName="username"/>
-                <br>
-
-            <div *ngIf="!Username?.valid && (Username?.dirty || Username?.touched)" class="error text-danger" role="alert">
-                <div *ngIf="Username?.errors?.required"><!--here the name firstname is from get method that is inside the ts file-->
-                  User Name is required
-                </div>
-                <div *ngIf="Username?.errors?.minlength">
-                    User Name length should be 3
-                  </div>
+            <input type="text"  class="textbox"   placeholder="Username " id="Username" required minlength="5"  
+             name="Username" formControlName="Username"/>
+        </p>
+        <div *ngIf="!Username?.valid && (Username?.dirty || Username?.touched)" class="error">
+            <div *ngIf="Username?.errors?.required">
+                Please enter Username  
             </div>
-                <br>
-    <input type="password" placeholder="Enter Password"  name="psw" formControlName="password"  />
-    <br>
-
-            <div *ngIf="!Password?.valid && (Password?.dirty || Password?.touched)" class="error text-danger" role="alert">
-                <div *ngIf="Password?.errors?.required"><!--here the name firstname is from get method that is inside the ts file-->
-                  Password is required
-                </div>
+        </div>
+        <div *ngIf="Username?.errors?.minlength">
+            Username minilength is 5
+        </div>
+        
+        <p>
+                
+                <input type="text" class="textbox" placeholder="Password" id="Password"  name="Password"   formControlName="Password"/>
+        </p>
+            <div *ngIf="!Password?.valid && (Password?.dirty || Password?.touched)" class="error">
                 <div *ngIf="Password?.errors?.pattern">
-                    Password pattern not macthing
-                  </div>
-            </div>
-            <br>
-
-            <button  type="Submit">Login</button>
-            <div class="checkbox">
-                <label><input type="checkbox" name="remember"> Remember me</label>
-            </div>
-            <div>
-                    <button type="button">Cancel</button>
+                    should contain one number,one character and one special
+                    character
                 </div>
-                <div >
-                    <a routerLink='ForgotPassword'>Forgot Password</a>
+            </div>
+            <div *ngIf="Password?.errors?.minlength">
+                Too short
+            </div>
+            <div *ngIf="!Password?.valid && (Password?.dirty || Password?.touched)" class="error">
+                <div *ngIf="Password?.errors?.required">
+                Please enter Password 
                 </div>
-
+            </div>
+    
             
-        </form>
-    </div>
+    
+    
+    <div >
+            <input type="submit"  id="regbtn"  value="Login" routerLink ='userdashboard' >
+        </div>
+
+        <div class="checkbox">
+            <label><input type="checkbox" name="remember"> Remember me</label>
+        </div>
+        <div>
+            <button type="button">Cancel</button>
+        </div>
+        <div>
+            <a routerLink= 'ForgotPassword'>Forgot Password ?</a>
+        </div><br><br>
+        <div>
+            <h3>Don't Have an account ?</h3><a routerLink= 'Sign-Up'>Sign Up</a>
+        </div>
+    </form>
 </div>

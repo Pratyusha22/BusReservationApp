@@ -13,7 +13,7 @@ export class SignUpComponent implements OnInit {
     LastName:new FormControl(""),
     
     EmailAddress:new FormControl("",[Validators.pattern("[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$"),Validators.required]),
-    Password:new FormControl("",[Validators.pattern(" ^(?=\D*\d)(?=[^a-z][a-z])(?=[^A-Z][A-Z]).{8,30}$"),Validators.minLength(8),
+    Password:new FormControl("",[Validators.pattern("[A-Z]"),Validators.minLength(8),
                                   Validators.required]),
     ConfirmPassword:new FormControl(""),
     

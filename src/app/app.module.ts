@@ -16,6 +16,17 @@ import { TermsOfUseComponent } from './terms-of-use/terms-of-use.component';
 import { SearchbusComponent } from './searchbus/searchbus.component';
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
+import { UserdashboardComponent } from './userdashboard/userdashboard.component';
+import { SeatComponent } from './seat/seat.component';
+import { PaymentComponent } from './payment/payment.component';
+import { GuestComponent } from './guest/guest.component';
+import { WalletComponent } from './wallet/wallet.component';
+import { ProfileComponent } from './profile/profile.component';
+import { ChangePasswordComponent } from './change-password/change-password.component';
+import { PrevBookingComponent } from './prev-booking/prev-booking.component';
+import { HIreBusComponent } from './hire-bus/hire-bus.component';
+import { AdmindashboardComponent } from './admindashboard/admindashboard.component';
+import { AdminforgotpasswordComponent } from './adminforgotpassword/adminforgotpassword.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +42,17 @@ import { AdminloginComponent } from './adminlogin/adminlogin.component';
     SearchbusComponent,
     ForgotpasswordComponent,
     AdminloginComponent,
+    UserdashboardComponent,
+    SeatComponent,
+    PaymentComponent,
+    GuestComponent,
+    WalletComponent,
+    ProfileComponent,
+    ChangePasswordComponent,
+    PrevBookingComponent,
+    HIreBusComponent,
+    AdmindashboardComponent,
+    AdminforgotpasswordComponent,
   ],
   imports: [
     BrowserModule,

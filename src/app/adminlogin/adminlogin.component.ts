@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-adminlogin',
@@ -8,10 +8,12 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class AdminloginComponent implements OnInit {
   ContactForm :FormGroup= new FormGroup({
-    Username:new FormControl(""),
-    Password:new FormControl("")
+    Username:new FormControl("",[Validators.required,Validators.minLength(5)]),
+    Password:new FormControl("",[Validators.required,Validators.pattern(" /^(?=.[A-Z])(?=.\d)(?=.[$@$!%#?&])[A-Za-z\d$@$!%*#?&]{8,20}$/"),
+    Validators.minLength(8)])
   }
   );
+
 
   constructor() { }
 
@@ -29,5 +31,6 @@ export class AdminloginComponent implements OnInit {
   {
     console.log(this.ContactForm.value)
   }
+
 
 }
