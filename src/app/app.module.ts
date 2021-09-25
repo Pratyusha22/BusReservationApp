@@ -27,6 +27,7 @@ import { PrevBookingComponent } from './prev-booking/prev-booking.component';
 import { HIreBusComponent } from './hire-bus/hire-bus.component';
 import { AdmindashboardComponent } from './admindashboard/admindashboard.component';
 import { AdminforgotpasswordComponent } from './adminforgotpassword/adminforgotpassword.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import { AdminforgotpasswordComponent } from './adminforgotpassword/adminforgotp
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

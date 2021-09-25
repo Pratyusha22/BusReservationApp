@@ -4,6 +4,7 @@ import { AboutComponent } from './about/about.component';
 import { AdmindashboardComponent } from './admindashboard/admindashboard.component';
 import { AdminforgotpasswordComponent } from './adminforgotpassword/adminforgotpassword.component';
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
+import { ChangePasswordComponent } from './change-password/change-password.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 import { HomeComponent } from './home/home.component';
@@ -13,6 +14,7 @@ import { SeatComponent } from './seat/seat.component';
 import { SignUpComponent } from './signup/signup.component';
 import { TermsOfUseComponent } from './terms-of-use/terms-of-use.component';
 import { UserdashboardComponent } from './userdashboard/userdashboard.component';
+import { WalletComponent } from './wallet/wallet.component';
 
 const routes: Routes = [
   {path:'Admin Login',component:AdminloginComponent},
@@ -33,7 +35,14 @@ const routes: Routes = [
   {path:'Sign-Up/Login',component:LoginComponent},
   {path:'Login/Sign-Up/Login',component:LoginComponent},
   {path:'Home/Searchbus',component:SearchbusComponent},
-  {path:'home/Searchbus/Seat',component:SeatComponent},
+  {path:'Home/Searchbus/Seat',component:SeatComponent},
+  {path:'Login/userdashboard/Changepassword',component:ChangePasswordComponent},
+  {path:'Login/userdashboard/Changepassword/userdashboard',component:UserdashboardComponent},
+  {path:'Login/userdashboard/Home',component:HomeComponent},
+  {path:'Login/userdashboard/Wallet',component:WalletComponent},
+  {path:'Login/userdashboard/Wallet/userdashboard',component:UserdashboardComponent},
+  {path:'Login/userdashboard/Home/Searchbus',component:SearchbusComponent},
+  {path:'Login/userdashboard/Home/Searchbus/Seat',component:SeatComponent},
 ];
 
 @NgModule({
